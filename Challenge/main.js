@@ -16,8 +16,11 @@ function changeHTML() {
 
 }
 
+let fullPrice = 0;
 function printCart(arr){
 	for(let i=0; i<arr.length;i++){
+		fullPrice += Number(arr[i].price);
+		document.getElementById("summe").innerHTML = fullPrice.toFixed(2) + "€";
 		let itemCard = document.createElement("div");
 		itemCard.className = "itemCard"
 		let image = document.createElement("img");
@@ -38,5 +41,11 @@ function printCart(arr){
 }
 
 function removeItem(a){
+	minus = a.parentNode.childNodes[2].textContent;
+	minus = minus.replace("€", "");
+	fullPrice -= minus;
+		document.getElementById("summe").innerHTML = fullPrice.toFixed(2) + "€";
+	
 	a.parentNode.parentNode.removeChild(a.parentNode);
+
 }
