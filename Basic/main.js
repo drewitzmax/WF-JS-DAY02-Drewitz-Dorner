@@ -26,7 +26,6 @@ function getMax(arr){
     console.log(max);
     console.log(sum);
     return max;
-
 }
 
 function randomArray(length){
@@ -35,4 +34,20 @@ function randomArray(length){
         arr.push(Math.floor(Math.random()*length*10));
     }
     return arr;
+}
+
+function averageGrade(){
+    let arr= [76,85,65,93,81];
+    let sum;
+    for(let i=0; i<arr.length; i++){
+        sum += arr[i];
+    }
+    let average= sum/arr.length;
+    switch(average){
+        case (average< 60): document.getElementById("basic3").innerHTML="F"; break;
+        case (average< 70): document.getElementById("basic3").innerHTML="D"; break;
+        case (average< 80): document.getElementById("basic3").innerHTML="C"; break;
+        case (average< 90): document.getElementById("basic3").innerHTML="B"; break;
+        case defalut : document.getElementById("basic3").innerHTML="A"; break;
+    }
 }
