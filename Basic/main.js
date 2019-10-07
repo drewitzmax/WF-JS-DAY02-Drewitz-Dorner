@@ -9,3 +9,24 @@ function calcTemp() {
     }
 
 }
+
+function getMax(arr){
+    let max;
+    for(let i=0; i<arr.length; i++){
+        if(i==0){
+            max = arr[i];
+        }
+        if(max<arr[i]){
+            max = arr[i];
+        }
+    }
+    return max;
+}
+
+function randomArray(length){
+    let arr = new Array;
+    for(let i=0; i<length;i++){
+        arr.push(Math.floor(Math.random()*length*10));
+    }
+    return arr;
+}
