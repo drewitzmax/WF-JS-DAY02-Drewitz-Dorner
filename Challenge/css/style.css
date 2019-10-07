@@ -117,4 +117,10 @@ body {
       body footer ul #copyright {
         color: dimgray; }
 
+.itemCard img {
+  width: 20em;
+  height: 20em; }
+.itemCard h5 {
+  font-size: 1.2em; }
+
 /*# sourceMappingURL=style.css.map */

@@ -19,16 +19,24 @@ function changeHTML() {
 function printCart(arr){
 	for(let i=0; i<arr.length;i++){
 		let itemCard = document.createElement("div");
-		itemCard.class = "itemCard"
+		itemCard.className = "itemCard"
 		let image = document.createElement("img");
 		image.src= arr[i].img;
-		let name = document.createElement("h1");
+		let name = document.createElement("h5");
 		name.textContent = arr[i].name;
 		let price = document.createElement("p");
-		price.textContent = arr[i].price;
-		itemCard.appendChild(name);
+		price.textContent = arr[i].price + "€";
+		let remove = document.createElement("button");
+		remove.textContent = "Delete";
+		remove.onclick = function () {removeItem(this.itemCard);};
 		itemCard.appendChild(image);
+		itemCard.appendChild(name);	
 		itemCard.appendChild(price);
+		itemCard.appendChild(remove);
 		document.getElementById("einkauf").appendChild(itemCard);
 	}
+}
+
+function removeItem(a){
+	a
 }
