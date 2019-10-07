@@ -12,7 +12,9 @@ function calcTemp() {
 
 function getMax(arr){
     let max;
+    let sum = 1;
     for(let i=0; i<arr.length; i++){
+        sum *= arr[i];
         if(i==0){
             max = arr[i];
         }
@@ -20,7 +22,11 @@ function getMax(arr){
             max = arr[i];
         }
     }
+    document.getElementById("basic2").innerHTML = "Max: " +max+ " Sum: " + sum; 
+    console.log(max);
+    console.log(sum);
     return max;
+
 }
 
 function randomArray(length){
