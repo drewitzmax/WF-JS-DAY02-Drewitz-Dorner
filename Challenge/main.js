@@ -28,7 +28,7 @@ function printCart(arr){
 		price.textContent = arr[i].price + "€";
 		let remove = document.createElement("button");
 		remove.textContent = "Delete";
-		remove.onclick = function () {removeItem(this.itemCard);};
+		remove.onclick = function (){removeItem(remove)};
 		itemCard.appendChild(image);
 		itemCard.appendChild(name);	
 		itemCard.appendChild(price);
@@ -38,5 +38,5 @@ function printCart(arr){
 }
 
 function removeItem(a){
-	a
+	a.parentNode.parentNode.removeChild(a.parentNode);
 }
