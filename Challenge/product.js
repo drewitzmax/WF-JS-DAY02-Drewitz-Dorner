@@ -1,6 +1,5 @@
 class Product{
-	constructor(id, img, name, price){
-		this.id = id;
+	constructor(img, name, price){
 		this.img = img;
 		this.name = name;
 		this.price = price;
