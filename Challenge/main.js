@@ -1,9 +1,11 @@
 arr = [];
 
 function addToCart(id){
-	let name = card.getElementsByClassName("name")[id].textContent;
-	let img = card.getElementsByClassName("imgProduct")[id].src;
-	let price = card.getElementsByClassName("price")[id].value;
+	let name =document.getElementsByClassName("name")[id].textContent;
+	let img =document.getElementsByClassName("imgProduct")[id].src;
+	let price =document.getElementsByClassName("price")[id].textContent;
+	price = price.substr(0,price.length-1);
+	price = price.replace(",",".");
 	pro = new Product (img, name, price);
 	arr.push(pro);
 }
