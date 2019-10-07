@@ -9,3 +9,9 @@ function addToCart(id){
 	pro = new Product (img, name, price);
 	arr.push(pro);
 }
+
+function changeHTML() {
+   
+  localStorage.myArray = JSON.stringify(arr);
+
+}
